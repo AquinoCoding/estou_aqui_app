@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "estou_aqui"
+version = "0.1.0"
+description = "Para maior acessibilidade"
+authors = ["Lucas Aquino <lucasaqs09@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

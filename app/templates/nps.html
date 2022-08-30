@@ -1,0 +1,20 @@
+{% extends "index.html" %}
+{% block content %}
+
+<head>
+    <title>{{ titulo }}</title>
+</head>
+
+<div class="container-background">
+    <div class="container">
+        <h1 align="center">{{ titulo }}</h1>
+    </div>
+
+        {% for text in texts %}
+        <div class="container">
+            <p> {{ text }} </p>
+        </div>
+        {% endfor %}
+</div>
+
+{% endblock %}

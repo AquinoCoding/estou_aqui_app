@@ -1,0 +1,60 @@
+{% extends "index.html" %}
+{% block content %}
+
+<head>
+    <title>{{ titulo }}</title>
+</head>
+
+<style>
+    input {
+
+        positon: flex;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 350px;
+        height: 55px;
+
+        background-color: rgba(255, 255, 255, 0.297);
+        border-radius: 10px;
+        backdrop-filter: blur(10px);
+        border: 2px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+    }
+
+    .container {
+        height: 600px;
+        width: 670px;
+        background-color: rgba(255, 255, 255, 0.297);
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+        border-radius: 10px;
+        backdrop-filter: blur(10px);
+        border: 2px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+        padding: 50px 35px;
+    }
+
+    input {
+        margin-left: 37%;
+
+    }
+</style>
+
+<br />
+
+<form method="post" action="/geo-localizacao-post">
+    <input placeholder="Para onde você quer ir ?" name="search"></input>
+</form>
+
+<div class="container">
+    <iframe width="600" height="500"
+        src="https://maps.google.com/maps?q={{ localization }}&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"
+        scrolling="no" marginheight="0" marginwidth="0">
+    </iframe>
+</div>
+
+{% endblock %}
